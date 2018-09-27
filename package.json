@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bgradio/firefly_theming.git"
+    "url": "git+https://github.com/bgradio/tenup-tech-ex-theme.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bgradio/firefly_theming/issues"
+    "url": "https://github.com/bgradio/tenup-tech-ex-theme/issues"
   },
-  "homepage": "https://github.com/bgradio/firefly_theming#readme",
+  "homepage": "https://github.com/bgradio/tenup-tech-ex-theme#readme",
   "devDependencies": {
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1"
