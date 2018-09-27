@@ -1,0 +1,211 @@
+/*! 
+ * Theme Name: 10up Technical Exercise Theme
+ * Author: Aaron McNeal
+ * Author URI: www.aaronmcneal.com
+ * Version: 1.0
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: 10up-tech-ex-theme
+ */
+
+/*** RESETS ***/
+@import url("../css/normalize.css")
+
+/*** FONTS ***/
+@import url('https://fonts.googleapis.com/css?family=Raleway')
+
+/*** VARIABLES ***/
+@import "variables"
+
+/*** GLOBALS ***/
+a
+  color: $orange
+
+body
+  background-color: $white
+  font-family: "Raleway", sans-serif
+
+footer
+  margin-top: $gutter-size
+
+.clearfix:after
+  content: " "
+  clear: both
+  display: block
+  height: 0
+  position: absolute
+  visibility: hidden
+
+.guttered
+  padding: 0 $gutter-size
+
+/*** HEADER ***/
+.tenup__header
+  a
+    color: $white
+
+  &__mobile-menu-container
+    cursor: pointer
+    display: block
+    left: 0
+    padding: 14px $gutter-size
+    position: absolute
+    top: 0
+
+    @media screen and (min-width: $large)
+      display: none
+
+    &.open
+      background: $blue
+
+    .svg-open, .svg-close
+      fill: $white
+      stroke: $white
+
+    .svg-close
+      display: none
+
+    svg:first-of-type
+      position: absolute
+
+  &__title-container
+    align-items: center
+    background: $light-blue
+    display: -webkit-flex
+    display: flex
+    height: $header-height
+    justify-content: center
+    position: relative
+
+    @media screen and (min-width: $large)
+      justify-content: flex-start
+
+  &__menu-container
+    background: $blue
+    display: none
+    min-height: $header-height
+
+    @media screen and (min-width: $large)
+      display: block !important
+      position: initial
+
+  &__menu
+    padding: 0
+
+    ul
+      align-items: center
+      display: -webkit-flex
+      display: flex
+      flex-flow: column
+      justify-content: flex-start
+      margin: 0
+      padding: 0
+
+      @media screen and (min-width: $large)
+        flex-flow: row
+
+      & > li
+        align-items: center
+        background: $blue
+        display: -webkit-flex
+        display: flex
+        height: 50px
+        list-style: none
+        transition: background-color 250ms
+        width: 100%
+        z-index: 99
+
+        @media screen and (min-width: $large)
+          width: auto
+
+        &:hover
+          background: $dark-blue
+
+          a
+            color: $yellow
+
+
+        a
+          font-size: $navigation-size
+          padding: 16px $gutter-size
+          width: 100%
+
+  &__site-logo
+    display: inline-block
+
+    @media screen and (min-width: $large)
+      display: inline-block
+
+    .logo
+      height: 40px
+      width: 50px
+
+  &__site-title
+    display: none
+    margin-left: ($gutter-increment) * 2
+
+    @media screen and (min-width: $large)
+      display: inline-block
+
+    a
+      text-decoration: none
+
+/*** CONTENT ***/
+.tenup__content
+  margin-top: $gutter-size
+  overflow: hidden
+
+  &__post-image
+    width: 100%
+
+    @media screen and (min-width: $large)
+      width: 66%
+
+    img
+      float: left
+      height: auto
+      width: 100%
+
+  &__copy
+    color: $dark-gray
+    float: left
+    width: 100%
+
+    @media screen and (min-width: $large)
+      margin-left: $gutter-size
+      width: 32%
+
+    h2
+      font-size: $heading-size
+      margin: 0
+
+    &__post-date
+      color: $gray
+      font-weight: bold
+      margin: $gutter-size 0 ($gutter-size / 2)
+
+    &__post-content
+      font-size: $content-size
+      font-weight: normal
+
+    &__post-more
+      font-weight: bold
+
+      .chevron
+        padding-left: $gutter-increment
+        position: relative
+
+      svg
+        position: absolute
+
+      .svg-chevron
+          fill: $orange
+          stroke: $orange
+
+    &__post-more-old
+      &:after
+        content: ""
+        background: url('../images/cheveron-right.svg') no-repeat
+        height: 20px
+        position: absolute
+        width: 20px
